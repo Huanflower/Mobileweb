@@ -1,87 +1,114 @@
-.cz_layout {
-    /* position: fixed; */
-    width: 100%;
-    height:100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-}
-.cz_topBar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    background: #006699;
-    text-align: center;
-    color: #fff;
-    z-index: 999;
-}
-.cz_topBar .icon_search,
-.cz_topBar .icon_refresh {
-    position: absolute;
-   color: #fff;
-   top: 10px;
-   right: 10px;
-   font-size: 18px;
-   padding: 3px;
-}
-.cz_topBar .icon_back {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 18px;
-    padding: 3px;
-}
-.cz_topBar form {
-    padding: 0 40px;
-    width: 100%;
-}
-.cz_topBar form input {
-    background: #fff;
-    margin-bottom: 0;
-    height: 30px;
-    padding: 0 10px;
-    color: #333;
-    border-radius: 2px;
-
-}
-/* 主题内容 */
-.cz_container{
-    position: relative;
-    padding-top: 45px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.mui-slider-indicator {
-    position: absolute;
-    /* margin-top: 40px; */
-    bottom: 20px;
+/* header */
+.lt-header {
+  background-color:#006699;
+  line-height: 45px;
 }
 
-.cz_tabs {
-    height: 50px;
-    width: 100%;
-    background-color: #006699;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
+.lt-header a {
+  display: block;
+  line-height: 45px;
+  color: #fff;
+  padding: 0 10px;
 }
-.cz_tabs a {
-    width: 25%;
-    float: left;
-    text-align: center;
-    color: #fff;
-    padding: 10px 0;
+
+.lt-header .mui-title {
+  color: #fff;
 }
-.cz_tabs a span {
-    display: block;
-    font-size: 12px;
-    padding: 3px 0;
+
+/* footer */
+.lt-toolbar {
+  background-color: #006699;
+}
+.lt-toolbar span:first-child {
+  display: block;
+}
+
+.lt-toolbar span:last-child {
+  font-size: 11px;
+}
+
+.lt-toolbar .mui-item {
+  display: table-cell;
+  overflow: hidden;
+  width: 1%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.lt-toolbar .mui-item.mui-active {
+  color: darkorange;
+}
+
+
+.item-wrap {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+}
+
+ .item-wrap:nth-child(odd) {
+  padding-right: 3px;
+}
+
+.item-wrap:nth-child(even) {
+  padding-left: 3px;
+}
+
+.item-wrap  .item {
+   display: block;
+   width: 100%;
+   box-shadow: 0 0 2px rgba(0,0,0,0.5);
+   background-color: #fff;
+   text-align: center;
+}
+
+
+.item-wrap .item img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.item-wrap  .item p {
+  width: 100%;
+  padding:0px 10px;
+  box-sizing: border-box;
+  height: 36px;
+
+  line-height: 18px;
+  /* 建议不要改 */
+  letter-spacing: 1px;
+
+  overflow: hidden;
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  /* 控制文字显示几行出现省略号 */
+  -webkit-line-clamp:2;
+}
+
+.item-wrap  .item .price {
+  font-size: 12px;
+  text-align: center;
+}
+
+.item-wrap .item  .price .new {
+  color: #ff0000;
+}
+
+.item-wrap .item  .price .old {
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.item-wrap .item  button {
+  margin: 10px auto;
+  background-color: #006699;
+  color: #fff;
 }
