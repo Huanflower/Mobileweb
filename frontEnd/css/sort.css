@@ -25,6 +25,7 @@ html,body {
 .lt-sort .lt-sort-left {
   width: 75px;
   height: 100%;
+  overflow: hidden;
 }
 
 

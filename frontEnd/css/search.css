@@ -1,11 +1,17 @@
 html,body {
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
 .lt-search {
- 
+   width: 100%;
+   height: 100%;
+   position: relative;
   background-color: #fff;
 }
-
+.lt-search .mui-scroll {
+  background-color: #fff;
+}
 .lt-search .search-box {
   position: relative;
   width: 100%;
@@ -39,9 +45,14 @@ html,body {
   font-size: 12px;
   border-radius: 8px;
 }
+.lt-search .empty-history {
+  width: 100%;
+  padding:0 10px;
+  box-sizing: border-box;
 
+}
 .lt-search .search-history {
-
+  display: none;
 }
 
 .lt-search .search-history-title {
@@ -101,7 +112,9 @@ html,body {
   text-align: center;
   line-height: 30px;
 }
-
+.search-result .search-result-order a.active {
+  color: red;
+}
 
 
 

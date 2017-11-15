@@ -47,7 +47,7 @@
       <span class="fa fa-shopping-cart"></span>
       <span class="mui-tab-label">购物车</span>
     </a>
-    <a class="mui-item" href="./user.html">
+    <a class="mui-item" href="./login.html">
       <span class="fa fa-user"></span>
       <span class="mui-tab-label">会员中心</span>
     </a>
@@ -56,14 +56,15 @@
   <div class="mui-content lt-search">
     <form>
       <div class="search-box">
-        <span>搜索</span>
+        <span id="search-btn">搜索</span>
         <input type="text" placeholder="搜索你喜欢的商品">
       </div>
     </form>
+    <p class="empty-history">没有历史搜索记录</p>
     <div class="search-history">
       <div class="search-history-title mui-clearfix">
         <span class="mui-pull-left">搜索历史</span>
-        <span class="mui-pull-right"><i class="fa fa-trash"></i> 清空记录</span>
+        <span id="clear-history" class="mui-pull-right"><i class="fa fa-trash"></i> 清空记录</span>
       </div>
       <ul class="search-history-list">
         <li>
@@ -77,12 +78,25 @@
       </ul>
     </div>
   </div>
+
+  <!-- 历史记录模板 -->
+  <script type="text/template" id="historyTemplate">
+  <%for(var i = 0;i <list.length;i++){%>
+
+    <li>
+      <span class="mui-pull-left"><%=list[i]%></span>
+      <i  class="fa fa-times mui-pull-right "></i>
+    </li>
+
+  <%} %>
+  </script>
+
   <script src="./lib/mui/js/mui.min.js"></script>
   <!-- 这是zepto里的核心模块之一在开发的时候可以一一进行引入 但是当项目上线之后 就需要合并所有模块 -->
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/artTemplate/template-native.js"></script>
   <script src="./js/common.js"></script>
-
+  <script src="./js/search.js"></script>
 </body>
 
 </html>

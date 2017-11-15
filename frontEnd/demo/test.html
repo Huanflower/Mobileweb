@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var cookie = "key1=value1 & key2=value2 & key3=value3";
+        
+        // 将楼上转成数组的形式
+        var cookie_arry = cookie.split("&");
+        console.log(cookie_arry);
+
+        // 将数组转成对象的形式
+        var obj = {};
+        for (var i = 0; i < cookie_arry.length; i++) {
+            var ary = cookie_arry[i].split("=");
+            obj[ary[0]] = ary[1];
+        }
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>

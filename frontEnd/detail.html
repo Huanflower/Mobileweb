@@ -39,23 +39,42 @@
    
     <!-- 中间内容 -->
     <div class="mui-content lt-detail">
+    
+    </div>
+    </div>
+  </div>
+
+  <!-- 底部工具 -->
+  <nav class="mui-bar mui-bar-tab lt-toolbar">
+    <!-- 点击之后会跳转到购物车页面 -->
+    <a href="" class="fa fa-shopping-cart"></a>
+    <button class="add-cart">加入购物车</button>
+    <button class="now-buy">立即购买</button>
+  </nav>
+
+  <script type="text/template" id="datailTemplate">
       <!-- 轮播图 -->
       <div class="mui-slider">
         <div class="mui-slider-group mui-slider-loop">
           <div class="mui-slider-item mui-slider-item-duplicate">
             <a href="#">
-              <img src="./images/detail.jpg" alt="">
+              <img src="<%=pic[0].picAddr%>" alt="">
             </a>
           </div>
           <div class="mui-slider-item">
             <a href="#">
-              <img src="./images/detail.jpg" alt="">
+              <img src="<%=pic[0].picAddr%>" alt="">
+            </a>
+          </div>
+          <div class="mui-slider-item">
+            <a href="#">
+              <img src="<%=pic[0].picAddr%>" alt="">
             </a>
           </div>
     
           <div class="mui-slider-item mui-slider-item-duplicate">
             <a href="#">
-              <img src="./images/detail.jpg" alt="">
+              <img src="<%=pic[0].picAddr%>" alt="">
             </a>
           </div>
         </div>
@@ -65,12 +84,12 @@
         </div>
       </div>
       <!-- 商品名称 -->
-      <p class="detail-name">Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
+      <p class="detail-name"><%=proName%></p>
       <!-- 价格 -->
       <div class="detail-price">
         <span>价格：</span>
-        <span class="new">￥499.1</span>
-        <span class="old">￥888.1</span>
+        <span class="new">￥<%=price%></span>
+        <span class="old">￥<%=oldPrice%></span>
       </div>
       <!-- 尺码 -->
       <div class="detail-size">
@@ -104,33 +123,22 @@
        </div> -->
       <div class="detail-num">
         <span>数量：</span>
-        <div class="mui-numbox">
-    
-          <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-          <input class="mui-input-numbox" type="number">
-          <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
-        </div>
-        <span>剩余20件</span>
+       <div class="mui-numbox" id="numbox_demo1" data-numbox-step="1" data-numbox-min="0" data-numbox-max="10">
+        <button class="mui-btn mui-btn-numbox-minus" type="button" disabled="">-</button>
+        <input class="mui-input-numbox" type="number">
+        <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+    </div>
+        <span>剩余：<%=num%>件</span>
       </div>
     
-    
-    
-    </div>
-    </div>
-  </div>
-
-  <!-- 底部工具 -->
-  <nav class="mui-bar mui-bar-tab lt-toolbar">
-    <!-- 点击之后会跳转到购物车页面 -->
-    <a href="" class="fa fa-shopping-cart"></a>
-    <button class="add-cart">加入购物车</button>
-    <button class="now-buy">立即购买</button>
-  </nav>
+  </script>
   <script src="./lib/mui/js/mui.min.js"></script>
   <!-- 这是zepto里的核心模块之一在开发的时候可以一一进行引入 但是当项目上线之后 就需要合并所有模块 -->
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/artTemplate/template-native.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/detail.js"></script>
+
 </body>
 
 </html>
