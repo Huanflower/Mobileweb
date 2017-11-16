@@ -33,7 +33,6 @@ $(function(){
         var keyWord = searchInput.val();
         setHistoryData(keyWord);
         location.href = './searchList.html?proName='+keyWord;
-        keyWord = '';
         showHistoryData();
     })
 

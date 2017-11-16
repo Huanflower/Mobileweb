@@ -60,7 +60,7 @@
         <input type="text" placeholder="搜索你喜欢的商品">
       </div>
     </form>
-    <p class="empty-history">没有历史搜索记录</p>
+    <p class="empty-history">没有历史记录</p>
     <div class="search-history">
       <div class="search-history-title mui-clearfix">
         <span class="mui-pull-left">搜索历史</span>
@@ -79,24 +79,22 @@
     </div>
   </div>
 
-  <!-- 历史记录模板 -->
+  <!-- 历史记录模板引擎 -->
   <script type="text/template" id="historyTemplate">
-  <%for(var i = 0;i <list.length;i++){%>
-
-    <li>
-      <span class="mui-pull-left"><%=list[i]%></span>
-      <i  class="fa fa-times mui-pull-right "></i>
+  <% for(var i = 0; i<list.length;i++){%>
+     <li>
+        <span class="mui-pull-left"><%=list[i]%></span>
+        <i class="fa fa-times mui-pull-right"></i>
     </li>
-
-  <%} %>
+  <% }%>
   </script>
-
   <script src="./lib/mui/js/mui.min.js"></script>
   <!-- 这是zepto里的核心模块之一在开发的时候可以一一进行引入 但是当项目上线之后 就需要合并所有模块 -->
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/artTemplate/template-native.js"></script>
   <script src="./js/common.js"></script>
   <script src="./js/search.js"></script>
+
 </body>
 
 </html>
